@@ -1,9 +1,14 @@
 package com.int28minutes.rest.webservices.restfulwebservices.user;
 
+import jakarta.validation.constraints.Past;
+import jakarta.validation.constraints.Size;
+
 import java.time.LocalDate;
 
 public class User {
+    @Size(min=2)
     private Integer id;
+    @Past
     private String name;
     private LocalDate birthDate;
 
